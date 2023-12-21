@@ -26,16 +26,16 @@ function cm_course_details_meta_box_callback($post) {
     wp_nonce_field(plugin_basename(__FILE__), 'course_details_nonce');
 
     // Course Name field
-   /*  $course_name = get_post_meta($post->ID, 'course_name', true);
+    $course_name = get_post_meta($post->ID, 'course_name', true);
     echo '<label class="meta-box-label" for="course_name">' . __('Course Name', 'course-management-tool') . '</label> ';
     echo '<input class="meta-box-field" type="text" id="course_name" name="course_name" value="' . esc_attr($course_name) . '" />';
- */
+ 
     // Short Description field
-  /*   $short_description = get_post_meta($post->ID, 'short_description', true);
+    $short_description = get_post_meta($post->ID, 'short_description', true);
     echo '<label class="meta-box-label" for="short_description">' . __('Short Description', 'course-management-tool') . '</label> ';
     echo '<textarea class="meta-box-field" id="short_description" name="short_description">' . esc_textarea($short_description) . '</textarea>';
     echo '</div>';
- */
+
     // Course Description field
     $course_description = get_post_meta($post->ID, 'course_description', true);
     echo '<label class="meta-box-label" for="course_description">' . __('Course Description', 'course-management-tool') . '</label> ';
@@ -55,10 +55,10 @@ function cm_course_details_meta_box_callback($post) {
  */
 
   // Course Image (URL) field
-   /*  $course_image = get_post_meta($post->ID, 'course_image', true);
+    $course_image = get_post_meta($post->ID, 'course_image', true);
     echo '<label class="meta-box-label" for="course_image">' . __('Course Image URL', 'course-management-tool') . '</label> ';
     echo '<input class="meta-box-field" type="text" id="course_image" name="course_image" value="' . esc_url($course_image) . '" />'; 
-    */
+   
 
     // Date field
     $date = get_post_meta($post->ID, 'course_date', true);
@@ -82,14 +82,14 @@ function cm_save_course_details($post_id) {
     }
 
     //Save course name
-/*     if (isset($_POST['course_name'])) {
+    if (isset($_POST['course_name'])) {
         update_post_meta($post_id, 'course_name', sanitize_text_field($_POST['course_name']));
-    } */
+    }
 
     // Save Short Description
-/*     if (isset($_POST['short_description'])) {
+    if (isset($_POST['short_description'])) {
         update_post_meta($post_id, 'short_description', sanitize_textarea_field($_POST['short_description']));
-    } */
+    }
 
     // Save Course Description
     if (isset($_POST['course_description'])) {
@@ -97,9 +97,9 @@ function cm_save_course_details($post_id) {
     }
 
     // Save Course Image
-/*     if (isset($_POST['course_image'])) {
+    if (isset($_POST['course_image'])) {
         update_post_meta($post_id, 'course_image', esc_url_raw($_POST['course_image']));
-    } */
+    }
 
     // Save Date
     if (isset($_POST['course_date'])) {
