@@ -42,7 +42,6 @@ More about structure and usage on section
 ### Built With
 
 * [![Wordpress][Wordpress]][Wordpress-url]
-* 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
