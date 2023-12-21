@@ -29,10 +29,8 @@ function cmt_list_courses_by_category($atts) {
         echo '<ul class="cmt-course-list" style="display: flex; flex-wrap: wrap; justify-content: space-between; list-style-type: none;">'; //we are using inline css here for clarity when testing, these can be modified to your need when you use this plugin in your theme
         while ($course_query->have_posts()) {
             $course_query->the_post();
-
-
             
-            // Retrieve custom meta box values
+            // Retrieve attributes that are builtin in Wordpress post
             $course_name = get_the_title();
             $course_excerpt = get_the_excerpt();
             $course_thumbnail = get_the_post_thumbnail_url(get_the_ID(), 'full');
