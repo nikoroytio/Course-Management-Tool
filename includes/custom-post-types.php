@@ -18,7 +18,7 @@ function cmt_register_course_post_type() {
         ],
         'public' => true,
         'has_archive' => true,
-        'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
+        'supports' => array('editor'),
         'show_in_rest' => true, // To enable Gutenberg editor
     ];
     register_post_type('course', $customtype);
