@@ -8,6 +8,14 @@ Author: Niko Röytiö
 Author URI: https://nikoroytio.com
 */
 
+
+// enque the textdomain for language localization
+function cmt_load_textdomain() {
+    load_plugin_textdomain('course-management-tool', false, basename(dirname(__FILE__)) . '/languages');
+}
+
+add_action('plugins_loaded', 'cmt_load_textdomain');
+
 // Include other PHP files
 include_once plugin_dir_path(__FILE__) . 'includes/custom-post-types.php';
 include_once plugin_dir_path(__FILE__) . 'includes/taxonomies.php';
