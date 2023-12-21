@@ -71,6 +71,8 @@ or installed Wordpress locally.
 This project can be used as a starting point, or template to your own portfolio.  
 Folder structure:  
 └── Course management tool/  
+&nbsp;&nbsp;├── course-management-tool.php  
+&nbsp;&nbsp;├── index.php  
 &nbsp;&nbsp;&nbsp;&nbsp;├── css  
 &nbsp;&nbsp;&nbsp;&nbsp;│ &nbsp;&nbsp;  └── pluginstyles.css  
 &nbsp;&nbsp;&nbsp;&nbsp;├── javascript  
@@ -80,13 +82,15 @@ Folder structure:
 &nbsp;&nbsp;&nbsp;&nbsp;│ &nbsp;&nbsp;  └── custom-post-types.php  
 &nbsp;&nbsp;&nbsp;&nbsp;│ &nbsp;&nbsp;  └── fetch-json.php  
 &nbsp;&nbsp;&nbsp;&nbsp;│ &nbsp;&nbsp;  └── meta-boxes.php  
-&nbsp;&nbsp;&nbsp;&nbsp;│ &nbsp;&nbsp;  └── taxonomies.php  
-&nbsp;&nbsp;&nbsp;&nbsp;└── src/  
-&nbsp;&nbsp;├── course-management-tool.php  
-&nbsp;&nbsp;├── index.php  
+&nbsp;&nbsp;&nbsp;&nbsp;│ &nbsp;&nbsp;  └── taxonomies.php 
+&nbsp;&nbsp;&nbsp;&nbsp;├── languages
+&nbsp;&nbsp;&nbsp;&nbsp;│ &nbsp;&nbsp;  └── course-management-tool.pot  
+&nbsp;&nbsp;&nbsp;&nbsp;│ &nbsp;&nbsp;  └── en_GB.po  
+&nbsp;&nbsp;&nbsp;&nbsp;│ &nbsp;&nbsp;  └── en_GB.mo  
+
 
       
-Project consists of main file course-management-tool.php, additional files for other functions, css and Javascript. index.php is for first line of security so the code can´t be accessed via usual url.  
+Project consists of main file course-management-tool.php, additional files for other functions, css and Javascript. Project has also language folder for translation readiness. index.php is for first line of security so the code can´t be accessed via usual url.  
 
 The course-manamegement-tool.php has file includes, queries for css and Javascript and registration hooks. It also has flushes because we are working with permalinks.  
 
