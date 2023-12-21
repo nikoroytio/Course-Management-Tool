@@ -86,18 +86,34 @@ Folder structure:
 &nbsp;&nbsp;├── index.php  
 
       
-Project is has two configurations. One for Vercel deployment, which uses /api folder in frontend, so you only need frontend if you want to use Vercel for deployment.  
-Backend is for local development and uses server.js for email handling. We have contact form in page, so in local you can test thank you messages etc. with backend.  
-Backend has server.js for controlling emails from the contact form. We use dotenv, so remember to create your own .env file where you can store your API_KEY and toher sensitive information. In this example we use SendGrid to handle emails.  
+Project consists of main file course-management-tool.php, additional files for other functions, css and Javascript. index.php is for first line of security so the code can´t be accessed via usual url.  
+
+The course-manamegement-tool.php has file includes, queries for css and Javascript and registration hooks. It also has flushes because we are working with permalinks.  
+
+The pluginstyles.css has some standard initial styling, but modify it to your projects needs.  
+
+The imageHandler.js is for using wordpress built in media library for custom course thumbnail. For default post types uses wordpress builtin post thumbnail.  
+You can also use images vie url by uncommenting function for it from meta-boxes.php  
+
+The /includes folder has files for configuring taxonomies, custom posts and meta-boxes for your liking. Categories shortcode is for displaying categories in pages.  
+For future reference the category shortcode could be also done as Gutenberg block for even easier usage.  
+
+The fetch-json.php is starting point for getting course information from external .json-file. When you are importing files from external .json-file, follow these steps:  
+
+  1. Fetching the JSON Data  
+You can use WordPress's HTTP API to fetch data from an external source. The wp_remote_get function is commonly used for this purpose.  
   
-In the public folder we have usual index.html for our project, we have added folder for custom fonts. You can change them to your own liking.  
-As structured, assets folder have images, videos and icons needed for the project.  
-In component folder we have invidual components, like Rock Paper Scissors game. Components required .js and .css is in this folder.  
-In section folder we have every section. They are named descriptive way, for example "About". Section has the section structure and component imports.  
-
-Page stylesheets are are used in descending way. So App.css sets overall rules for the whole page's look. Sections own .css files have section specific styling and invidual component styling is found in each components .css-file.  
+2. Processing the JSON Data  
+Once you fetch the JSON data, you'll need to parse it and iterate over the items to either create new posts or update existing ones.  
+  
+3. Creating or Updating Posts  
+For each item in the JSON data, check if a post with the same 'id' already exists in your WordPress database. If it does, update it; if not, create a new post.  
+  
+4. Scheduling Regular Updates  
+Consider using WordPress Cron (a time-based job scheduler in WP) to regularly fetch and update your data.  
+     
+ 
    
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>  
 
 
