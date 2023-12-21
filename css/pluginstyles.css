@@ -1,0 +1,38 @@
+/* custom stylesheet for the plugin */
+/* additional styling would be neede when doing for a client */
+
+.meta-box-label {
+    text-align: center;
+    display: block;
+    margin: 20px;
+}
+
+/* Style adjustments for inputs and textareas */
+.meta-box-field {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.meta-box-button {
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* these are for image preview, if you are using meta boxes for featured image instead of wordpress built in thumbnail */
+/* .meta-box-img-preview{
+    display: block;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+.cmt-course-list {
+    display: flex; /*depending on the needs the styling and layout could differ, but in this case we use flex */
+    flex-wrap: wrap;
+    align-items: space-between;
+    list-style-type: none;
+}
+
