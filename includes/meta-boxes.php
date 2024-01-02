@@ -54,6 +54,12 @@ function cm_course_details_meta_box_callback($post) {
     echo '</div>';
  */
 
+    // Course Image (URL) field
+    $course_image = get_post_meta($post->ID, 'course_image', true);
+    echo '<label class="meta-box-label" for="course_image">' . __('Course Image URL', 'course-management-tool') . '</label> ';
+    echo '<input class="meta-box-field" type="text" id="course_image" name="course_image" value="' . esc_url($course_image) . '" />'; 
+   
+
     // Date field
     $date = get_post_meta($post->ID, 'course_date', true);
     echo '<label class="meta-box-label" for="course_date">' . __('Date', 'course-management-tool') . '</label> ';
@@ -91,9 +97,9 @@ function cm_save_course_details($post_id) {
     }
 
     // Save Course Image
-/*     if (isset($_POST['course_image'])) {
+    if (isset($_POST['course_image'])) {
         update_post_meta($post_id, 'course_image', esc_url_raw($_POST['course_image']));
-    } */
+    }
 
     // Save Date
     if (isset($_POST['course_date'])) {
