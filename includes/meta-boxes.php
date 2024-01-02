@@ -13,7 +13,7 @@ function cm_add_course_meta_boxes() {
         'course_details',
         __('Course Details', 'course-management-tool'),
         'cm_course_details_meta_box_callback',
-        'course'
+        'course',
     );
 }
 add_action('add_meta_boxes', 'cm_add_course_meta_boxes');
